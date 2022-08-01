@@ -10,7 +10,9 @@ import { LOCAL_STORAGE_KEY } from "../constants";
 
 export const DEFAULT_STATE: DeviceSelections = {
     androidSelection: getDefaultDevice("android"),
-    iosSelection: getDefaultDevice("ios")
+    iosSelection: getDefaultDevice("ios"),
+    androidDevices: [],
+    iosDevices: []
 };
 
 export const saveToLocalStorage = (data: DeviceSelections) => {

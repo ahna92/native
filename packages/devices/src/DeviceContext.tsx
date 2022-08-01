@@ -4,5 +4,7 @@ import { getDefaultDevice } from "./getDevices";
 
 export const DeviceContext = React.createContext<DeviceSelections>({
     androidSelection: getDefaultDevice("android"),
-    iosSelection: getDefaultDevice("ios")
+    iosSelection: getDefaultDevice("ios"),
+    androidDevices: [],
+    iosDevices: [],
 });

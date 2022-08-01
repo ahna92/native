@@ -1,4 +1,6 @@
 export interface NativeDevMiddlewareConfig {
+    /** Path to `emulator`. Defaults to `emulator` */
+    androidEmulatorCommandPath?: string;
     /** Path to `adb`. Defaults to `adb` */
     androidCommandPath?: string;
     /** Path to `xcrun`. Defaults to `xcrun` */

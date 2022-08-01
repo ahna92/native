@@ -10,7 +10,7 @@
     "Vanya Sehgal <vanya_sehgal@intuit.com>"
   ],
   "scripts": {
-    "start": "yarn build:stories && yarn start-storybook -p 53743",
+    "start": "export STORYBOOK_NATIVE_LOCAL_EMULATOR=true && export STORYBOOK_NATIVE_LOCAL_EMULATOR_STREAM_ENABLED=true && export STORYBOOK_NATIVE_LOCAL_EMULATOR_STREAM_URL='http://localhost:8000' && rm -rf node_modules/.cache && yarn build:stories && yarn start-storybook -p 53743",
     "build:storybook": "yarn build:stories && yarn build-storybook",
     "build:stories": "node ./generate.js"
   },
@@ -18,6 +18,7 @@
   "dependencies": {
     "@storybook/native": "link:../../packages/native",
     "@storybook/native-addon": "link:../../packages/addon",
+    "@storybook/native-dev-middleware": "link:../../packages/dev-middleware",
     "axios": "0.20.0",
     "change-case": "4.1.1"
   }

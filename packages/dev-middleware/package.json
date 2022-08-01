@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@storybook/native-types": "link:../types",
+    "ws-scrcpy": "file:../../ws-scrcpy-0.8.0-dev.tgz",
     "@types/express": "^4.17.11",
     "express": "^4.17.0"
   },

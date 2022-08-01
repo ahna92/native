@@ -61,8 +61,12 @@ export default class LocalEmulatorController implements EmulatorController {
         }
     }
 
-    // TODO: start up emulator if needed
-    createEmulator(): void {}
+    createEmulator(): void {
+        const thunk = performCommand("/devices/create", {
+            platform: "android"
+        })
+        dispatchThunk(thunk);
+    }
 
     private undebouncedOpenDeepLink(deepLinkUrl: string) {
         logDeepLink(deepLinkUrl);

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@storybook/native-types": "link:../types",
+    "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
